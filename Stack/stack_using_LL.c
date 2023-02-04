@@ -38,15 +38,14 @@ void pop()
     else
     {
         struct node *p = head;
-        struct node *q = head->next;
 
-        while (q->next != NULL)
+        while ((p->next)->next != NULL)
         {
-            q = q->next;
+
             p = p->next;
         }
+        printf("\nThe poped element is:%d", (p->next)->data);
         p->next = NULL;
-        printf("\nThe poped element is:%d", q->data);
         temp = p;
         i--;
     }
